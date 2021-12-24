@@ -11,11 +11,8 @@ app.use(express.json());
 
 
 // Routes (url del servidor para procesar datos)
-app.use(require('./routes/personas'));
+app.use(require('./routes/people'));
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-});
 // Starting the server
 app.listen(app.get('port'), ()  => {
     console.log('Server on port', app.get('port'));
